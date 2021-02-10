@@ -145,26 +145,23 @@ var endGame = function() {
 var shop = function() {
     // ask player what they'd like to do
     var shopOptionPrompt = window.prompt ("Would you like to REFILL your health, UPGRADE you attack, or LEAVE the store? Please enter one: 'REFILL', UPGRADE' or 'LEAVE' to make a chioce.");
+    // use switch case to carry out action
+    shopOptionPrompt = parseInt(shopOptionPrompt);
     switch (shopOptionPrompt) {
-        case "refill":
-        case "REFILL":
+        case 1:
             playerInfo.refillHealth();
             break;
-        case "upgrade":
-        case "UPGRADE":
-            playerInfo.Info.upgradeAttack();  
+        case 2:
+            playerInfo.upgradeAttack();
             break;
-        case "leave":
-        case "LEAVE":
+        case 3:
             window.alert("Leaving the store.");
-            // do nothing, so function will end
             break;
         default:
             window.alert("You did not pick a valid option. Try again.");
-            //call shop() again to force player to pick a valid option
             shop();
             break;
-    }
+  }
 };
 // function to generate a random numeric value
 var randomNumber = function(min, max) {
