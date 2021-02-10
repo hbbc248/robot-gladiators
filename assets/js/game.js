@@ -144,7 +144,7 @@ var endGame = function() {
 // function for shopping
 var shop = function() {
     // ask player what they'd like to do
-    var shopOptionPrompt = window.prompt ("Would you like to REFILL your health, UPGRADE you attack, or LEAVE the store? Please enter one: 'REFILL', UPGRADE' or 'LEAVE' to make a chioce.");
+    var shopOptionPrompt = window.prompt ("Would you like to REFILL your health, UPGRADE you attack, or LEAVE the store? Please enter one (1) for 'REFILL', two (2) for 'UPGRADE' or three (3) to 'LEAVE' to make a chioce.");
     // use switch case to carry out action
     shopOptionPrompt = parseInt(shopOptionPrompt);
     switch (shopOptionPrompt) {
